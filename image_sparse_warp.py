@@ -159,6 +159,9 @@ def image_sparse_warp_precompute(image, ele, y_seg, x_seg):
     return empty_res_image, points_xy, val_rtheta, val_weights
   
   
+
+
+
 @tf.function
 def image_sparse_warp(image, empty_res_image, ele, points_xy, val_rtheta, val_weights):
     '''
