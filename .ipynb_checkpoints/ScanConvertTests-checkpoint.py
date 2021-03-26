@@ -1,9 +1,9 @@
 from config import *
 from util import *
-from image_sparse_warp import *
+from scan_convert import *
 
 
-class ImageSparseWarpUnitTest(unittest.TestCase):
+class ScanConvertUnitTest(unittest.TestCase):
     def test_load_dataset(self):
         self.assertEqual(len(ele['das'].shape), 2)
         self.assertEqual(len(ele['dtce'].shape), 2)
