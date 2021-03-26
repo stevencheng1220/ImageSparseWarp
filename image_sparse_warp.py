@@ -33,7 +33,6 @@ def image_sparse_warp_precompute(image, ele, y_seg, x_seg):
     grid_x_rtheta, grid_y_rtheta = tf.meshgrid(grid_x_rtheta, grid_y_rtheta)
     grid_y_rtheta, grid_x_rtheta = tf.reshape(grid_y_rtheta, [-1]), tf.reshape(grid_x_rtheta, [-1])
     grid_vals_rtheta = tf.gather(image, tf.cast(tf.stack([grid_y_rtheta,grid_x_rtheta], axis=-1), tf.int32))
-    ### CHECK THIS GRID VALUES IF THEY ARE CORRECT !!!!!
 
     ### Initialize grid points (x, y) in x-y space ###
     angles = tf.math.divide(
