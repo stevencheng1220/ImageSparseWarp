@@ -1,7 +1,7 @@
 from config import *
 
 @tf.function
-def image_sparse_warp_precompute(image, ele, y_seg, x_seg):
+def scan_convert_precompute(image, ele, y_seg, x_seg):
     '''
     Step 0: Initialize variables for use
     '''
@@ -164,7 +164,7 @@ def image_sparse_warp_precompute(image, ele, y_seg, x_seg):
 
 
 @tf.function
-def image_sparse_warp(image, empty_res_image, ele, points_xy, val_rtheta, val_weights):
+def scan_convert_scratch(image, empty_res_image, ele, points_xy, val_rtheta, val_weights):
     '''
     Step 5: Dynamically find pixel values for all four bilinear point for each of interest in r-theta plane
     '''

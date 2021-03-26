@@ -48,9 +48,9 @@ test_dataset = ds['MARK'].map(process)
 test_iter = iter(test_dataset)
 ele = next(test_iter)
 
-empty_res_image, points_xy, val_rtheta, val_weights = image_sparse_warp_precompute(
+empty_res_image, points_xy, val_rtheta, val_weights = scan_convert_precompute(
     ele['dtce'], ele, ele['dtce'].shape[0], ele['dtce'].shape[1])
-res = image_sparse_warp(ele['dtce'], empty_res_image, ele, points_xy, val_rtheta, val_weights)
+res = scan_convert_raw(ele['dtce'], empty_res_image, ele, points_xy, val_rtheta, val_weights)
 
 unittest.main()
 
