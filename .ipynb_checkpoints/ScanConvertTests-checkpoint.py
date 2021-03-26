@@ -50,7 +50,7 @@ ele = next(test_iter)
 
 empty_res_image, points_xy, val_rtheta, val_weights = scan_convert_precompute(
     ele['dtce'], ele, ele['dtce'].shape[0], ele['dtce'].shape[1])
-res = scan_convert_raw(ele['dtce'], empty_res_image, ele, points_xy, val_rtheta, val_weights)
+res = scan_convert_scratch(ele['dtce'], empty_res_image, ele, points_xy, val_rtheta, val_weights)
 
 unittest.main()
 
